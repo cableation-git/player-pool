@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col-md-10">
+        <app-club-edit></app-club-edit>
+        <hr>
+        <div class="col-xs-12">
+            <a class="list-group-item" 
+            style="cursor: pointer" 
+            *ngFor="let club of clubs;">
+                {{ club.name }}
+            </a>
+        </div>  
+    </div>    
+</div>

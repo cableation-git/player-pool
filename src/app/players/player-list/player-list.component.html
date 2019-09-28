@@ -1,0 +1,22 @@
+<div class="row spaceLeft">
+    <div class="col-xs-12">
+        <button class="btn btn-success">New Player</button>
+    </div>
+</div>
+
+<div class="row spaceLeft">
+    <h2>Player List</h2>
+</div>
+<div class="row spaceLeft">
+    <div class="col-xs-12">
+        <a href="#" class="list-group-item clearfix" *ngFor="let player of players;">
+            
+            <div class="pull-left">
+                <!-- <h4 class="list-group-item-heading">Player</h4>  -->
+                <span class="list-group-item_heading"> {{ player.firstName }} {{ player.lastName }}, {{ player.birthCity}} </span>              
+            </div>
+        </a>
+       <app-player-item></app-player-item>
+    </div>
+</div>
+
