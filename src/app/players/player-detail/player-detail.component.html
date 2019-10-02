@@ -1,15 +1,15 @@
 <div class="row">
     <div class="col-xs-12">
-        <!-- <img 
-        [src]="player.imagePath" 
+        <img 
+        [src]="player.imageURL" 
         alt="{{ player.lastName }}"
          class="img-responsive"
-         style="max-height: 100px;"> -->
+         style="max-height: 100px;">
     </div>
 </div>
 <div class="row">
     <div class="col-xs-12">
-        <!-- <h1>{{ player.lastName}}</h1> -->
+        <h1>{{ player.lastName }}</h1>
     </div>
 </div>
 <div class="row">
@@ -21,9 +21,10 @@
             class="btn btn-primary dropdown-toggle">
             Manage Player <span class="caret"></span>
             </button>
-            <ul class="dropdown-menu">                
-                <!-- <li><a style="cursor: pointer" (click)="onEditPlayer()">Edit Player</a></li>
-                <li><a style="cursor: pointer" (click)="onDeletePlayer()">Delete Player</a></li> -->
+            <ul >         <!--class="dropdown-menu"-->
+                <li><a style="cursor: pointer" (click)="onAddClubToPlayerClub()">Add Club To Player</a></li>       
+                <li><a style="cursor: pointer" (click)="onEditPlayer()">Edit Player</a></li>
+                <li><a style="cursor: pointer" (click)="onDeletePlayer()">Delete Player</a></li>
             </ul>
         </div>
     </div>
@@ -33,19 +34,15 @@
       FirstName
     </div>
 </div>
+
 <div class="row">
-    <div class="col-xs-12">
-      LastName
-    </div>
-</div>
-<!-- <div class="row">
     <div class="col-xs-12">
         <ul class="list-group">
             <li
                 class="list-group-item"
-                *ngFor="let club of clubs">
+                *ngFor="let club of player.clubs">
                 {{ club.name }} - {{ club.league}}
             </li>
         </ul>
     </div>
-</div> -->
+</div>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Club } from '../clubs/club.model';
+import { ClubService } from './club.service';
 
 @Component({
   selector: 'app-clubs',
@@ -7,16 +8,18 @@ import { Club } from '../clubs/club.model';
   styleUrls: ['./clubs.component.css']
 })
 export class ClubsComponent implements OnInit {
-  clubs: Club[] = [
-    new Club('Arsenal','EPL',1897,'https://www.arsenal.com/sites/default/files/styles/mobile_16x9/public/images/arsenal_crest.jpg?itok=6FqNkIv-',
-    'Premiere','London','UK'),
-    new Club('Chelsea','EPL',1897,'https://www.arsenal.com/sites/default/files/styles/mobile_16x9/public/images/arsenal_crest.jpg?itok=6FqNkIv-',
-    'Premiere','London','UK'),
-  ];
+  clubs: Club[]; 
 
-  constructor() { }
+  constructor(private clubService: ClubService) { }
 
   ngOnInit() {
+    this.clubs = this.clubService.getClubs();
+    this.clubService.clubsChanged
+      .subscribe(
+        (clubs: Club[]) => {
+          this.clubs = clubs;
+        }
+      )
   }
 
 }

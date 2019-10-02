@@ -1,1 +1,83 @@
-<p>club-edit works!</p>
+<div class="row">
+    <div class="col-xs-12">
+        <form>
+            <div class="row">
+                <div class="col-sm-6 form-group">
+                    <label for="clubName">Club Name</label>
+                    <input 
+                        type="text" 
+                        id="clubName" 
+                        class="form-control"
+                        #clubNameInput>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-5 form-group">
+                    <label for="league">League</label>
+                    <input 
+                        type="text" 
+                        id="league" 
+                        class="form-control"
+                        #leagueInput>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-5 form-group">
+                    <label for="originYear">Club Inception</label>
+                    <input 
+                        type="text" 
+                        id="originYear" 
+                        class="form-control"
+                        #originYearInput>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-5 form-group">
+                    <label for="iconURL">Club Badge</label>
+                    <input 
+                        type="text" 
+                        id="iconURL" 
+                        class="form-control"
+                        #iconURLInput>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-5 form-group">
+                    <label for="leagueDivision">Division</label>
+                    <input 
+                        type="text" 
+                        id="leagueDivision" 
+                        class="form-control"
+                        #leagueDivisionInput>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-5 form-group">
+                    <label for="city">City</label>
+                    <input 
+                        type="text" 
+                        id="city" 
+                        class="form-control"
+                        #cityInput>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-5 form-group">
+                    <label for="country">Country</label>
+                    <input 
+                        type="text" 
+                        id="country" 
+                        class="form-control"
+                        #countryInput>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <button class="btn btn-success" type="submit" (click)="onAddItem()">Add</button>
+                    <button class="btn btn-danger" type="button">Delete</button>
+                    <button class="btn btn-primary" type="submit">Clear</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
